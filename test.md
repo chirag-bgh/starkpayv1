@@ -9,3 +9,11 @@ protostar -p devnet deploy ./build/StarkInu.json --inputs 6013538546500595317 60
 
 
 protostar -p devnet invoke --contract-address 0x037a79dc75d9cb8b35b989dcf97bfd47befa2d8801983af508c6d26407c62d5a --function "transfer" --account-address 0x32086ff5e0fe7c1841665e6122fedfbb0b2eb860b74deda82d488a88162a21a --max-fee auto --inputs 0x00DF51989eF24C01edD95818aD10E3FCb46cBaF7dc5408D7C67D17C58b0b815f 1000000000000000000 --private-key-path ./.pkey
+
+protostar -p devnet invoke --contract-address 0x05c18fcd85f150c571944582cadee88753b6f1e8ed5fb8c293cdf26e2152e1fb --function "createStream" --account-address 0x32086ff5e0fe7c1841665e6122fedfbb0b2eb860b74deda82d488a88162a21a --max-fee auto --inputs 0x32086ff5e0fe7c1841665e6122fedfbb0b2eb860b74deda82d488a88162a21a 0x00DF51989eF24C01edD95818aD10E3FCb46cBaF7dc5408D7C67D17C58b0b815f 0x037a79dc75d9cb8b35b989dcf97bfd47befa2d8801983af508c6d26407c62d5a 1000000000000000000 10000000000000000000 --private-key-path ./.pkey
+
+token add : 0x037a79dc75d9cb8b35b989dcf97bfd47befa2d8801983af508c6d26407c62d5a
+
+allowance: 
+
+protostar -p devnet invoke --contract-address 0x05c18fcd85f150c571944582cadee88753b6f1e8ed5fb8c293cdf26e2152e1fb --function "allowance" --account-address 0x32086ff5e0fe7c1841665e6122fedfbb0b2eb860b74deda82d488a88162a21a --max-fee auto --inputs 0x32086ff5e0fe7c1841665e6122fedfbb0b2eb860b74deda82d488a88162a21a 0x00DF51989eF24C01edD95818aD10E3FCb46cBaF7dc5408D7C67D17C58b0b815f 1000000000000000000 10000000000000000000 --private-key-path ./.pkey
